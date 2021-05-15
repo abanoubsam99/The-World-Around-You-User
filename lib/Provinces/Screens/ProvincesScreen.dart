@@ -13,7 +13,7 @@ class _ProvincesScreenState extends State<ProvincesScreen> {
 backgroundColor: Theme.of(context).accentColor,
       appBar: AppBar(
         title: Text(
-          "الاقسام", style: TextStyle(color: Colors.white, fontSize: 25,),),
+          "المحافظات", style: TextStyle(color: Colors.white, fontSize: 25,),),
         centerTitle: true,
         leading: IconButton(
             icon: Icon(Icons.arrow_back_outlined, color: Colors.white,),

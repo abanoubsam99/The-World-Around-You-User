@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:the_world_around_you_user/Provinces/Screens/ProvincesScreen.dart';
 
-class BuildingsMainScreenGridView extends StatelessWidget {
-  List<Map<String, dynamic>> _buildingsMainScreenGridViewData = [
-    {'title': 'مكاتب', 'image': 'Assets/home/homes office.png'},
-    {'title': 'مواد البناء', 'image': 'Assets/home/cement.png'},
-    {'title': ' لوازم التشطيب', 'image': 'Assets/home/paint.png'},
+class EducationMainScreenGridView extends StatelessWidget {
+  List<Map<String, dynamic>> _educationMainScreenGridViewData = [
+    {'title': 'سنترات', 'image': 'Assets/home/education.png'},
+    {'title': 'مكتبات', 'image': 'Assets/home/bookslibrary.png'},
   ];
   @override
   Widget build(BuildContext context) {
@@ -16,10 +15,10 @@ class BuildingsMainScreenGridView extends StatelessWidget {
             crossAxisSpacing: 30,
             mainAxisSpacing: 30),
         padding: EdgeInsets.symmetric(horizontal: 25, vertical: 40),
-        itemCount: _buildingsMainScreenGridViewData.length,
+        itemCount: _educationMainScreenGridViewData.length,
         itemBuilder: (ctx, index) {
           return InkWell(
-            onTap: (){
+            onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -41,11 +40,11 @@ class BuildingsMainScreenGridView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Image.asset(
-                    _buildingsMainScreenGridViewData[index]['image'],
+                    _educationMainScreenGridViewData[index]['image'],
                     scale: 1.5,
                   ),
                   Text(
-                    _buildingsMainScreenGridViewData[index]['title'],
+                    _educationMainScreenGridViewData[index]['title'],
                     style: TextStyle(color: Colors.black, fontSize: 15),
                   )
                 ],

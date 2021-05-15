@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:the_world_around_you_user/Catalog/categories/World%20of%20cars/screens/CarsMainScreen.dart';
 import 'package:the_world_around_you_user/Catalog/categories/buildings/screens/buildingsMainScreen.dart';
 import 'package:the_world_around_you_user/Catalog/categories/clothesShop/screens/clothesShopMainScreen.dart';
+import 'package:the_world_around_you_user/Catalog/categories/education/screens/EducationMainScreen.dart';
 import 'package:the_world_around_you_user/Catalog/categories/medicine/screens/medicineMainScreen.dart';
 import 'package:the_world_around_you_user/Catalog/categories/womenWorld/screens/womenWorldMainScreen.dart';
 import 'package:the_world_around_you_user/Provinces/Screens/ProvincesScreen.dart';
@@ -28,18 +30,23 @@ class CatalogScreenGridView extends StatelessWidget {
       'path': ClothesShopMainScreen()
     },
     {
+      'title': 'عالم التكنولوجيا',
+      'image': 'Assets/home/technology.png',
+      'path': ProvincesScreen()
+    },
+    {
       'title': 'أسواق',
       'image': 'Assets/home/markets.png',
       'path': ProvincesScreen()
     },
 
     {
-      'title': 'مكتبات',
-      'image': 'Assets/home/bookslibrary.png',
-      'path': ProvincesScreen()
+      'title': 'تعليم',
+      'image': 'Assets/home/educationcenter.png',
+      'path': EducationMainScreen()
     },
 
-    {'title': 'عالم السيارات', 'image': 'Assets/home/cars.png', 'path': ProvincesScreen()},
+    {'title': 'عالم السيارات', 'image': 'Assets/home/cars.png', 'path': CarsnMainScreen()},
     {'title': 'رياضه', 'image': 'Assets/home/sport.png', 'path': ProvincesScreen()},
     {
       'title': 'عالم المرأه',
@@ -47,7 +54,7 @@ class CatalogScreenGridView extends StatelessWidget {
       'path': WomenWorldMainScreen()
     },
     {
-      'title': 'ما يلزمه البيت الحديث',
+      'title': 'ما يلزم البيت الحديث',
       'image': 'Assets/home/whisk.png',
       'path':ProvincesScreen()
     },

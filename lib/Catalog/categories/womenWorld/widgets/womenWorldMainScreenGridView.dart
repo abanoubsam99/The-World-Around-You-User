@@ -4,6 +4,7 @@ import 'package:the_world_around_you_user/Provinces/Screens/ProvincesScreen.dart
 class WomenWorldMainScreenGridView extends StatelessWidget {
   List<Map<String, dynamic>> _womenWorldMainScreenGridViewData = [
     {'title': 'كوافير', 'image': 'Assets/home/hairdresser.png'},
+    {'title': 'اتيليه', 'image': 'Assets/home/atelier.png'},
     {'title': 'إكسسوارات', 'image': 'Assets/home/accessories.png'},
     {'title': 'مجوهرات', 'image': 'Assets/home/Jewelery.png'},
   ];

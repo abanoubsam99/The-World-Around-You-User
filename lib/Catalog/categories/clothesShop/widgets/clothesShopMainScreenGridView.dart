@@ -6,6 +6,7 @@ class ClothesShopMainScreenGridView extends StatelessWidget {
     {'title': 'حريمي', 'image': 'Assets/home/Womens.png'},
     {'title': 'رجالي', 'image': 'Assets/home/men.png'},
     {'title': 'أطفال', 'image': 'Assets/home/children.png'},
+    {'title': ' عطور واكسسوارات', 'image': 'Assets/home/perfumes.png'},
   ];
   @override
   Widget build(BuildContext context) {
