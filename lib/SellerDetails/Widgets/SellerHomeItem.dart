@@ -23,51 +23,12 @@ SellerHomeDetails_WithImage({BuildContext context,String title,String image}){
   );
 }
 
-List<Map<String, dynamic>>  sellerProducerList=[
-  {'title':'باكيت كنتاكي 1','image':'Assets/market1.jpg','price':'100'},
-  {'title':'باكيت كنتاكي 2','image':'Assets/market2.jpg','price':'50'},
-  {'title':'باكيت كنتاكي 3','image':'Assets/market1.jpg','price':'150'},
-  {'title':'باكيت كنتاكي 4','image':'Assets/market2.jpg','price':'200'},
-  {'title':'باكيت كنتاكي 5','image':'Assets/market1.jpg','price':'300'},
-];
-SellerProducerItem({BuildContext context,String title,String image,String price}){
-  return Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Container(
-      width: MediaQuery.of(context).size.width,
-      height: 200 ,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-      //  color: Colors.deepPurple,
-        image: DecorationImage(image: AssetImage(image),fit:BoxFit.cover )
-      ),
-      child: Stack(
-        children: [
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: 200 ,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.black.withOpacity(.3),
-          ),
-        ),
-
-          Positioned(
-              left: 20,
-              bottom: 20,
-              child: Text('\$'+price,style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold),)),
-
-          Positioned(
-              right: 20,
-              bottom: 20,
-              child: Text(title,style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold),))
-      ],),
-    ),
-  );
-}
-
-
 class CustomSliverAppBar extends StatelessWidget {
+  String name,phone1,phone2,time,face,whats,address, imgcigwer,imglogo,governorate,city,area;
+  int marketid;
+  int Planid;
+  CustomSliverAppBar({@required this.governorate,@required this.city,@required this.area,@required this.name,@required this.phone1,@required this.phone2,@required this.time,@required this.face,
+    @required this.whats,@required  this.address,@required  this.imgcigwer,@required  this.imglogo,@required  this.marketid});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -86,15 +47,15 @@ class CustomSliverAppBar extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.red,
                   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50),bottomRight: Radius.circular(50) ),
-                  image: DecorationImage(image: AssetImage("Assets/market2.jpg"),fit: BoxFit.cover)
+                  image: DecorationImage(image: NetworkImage(imgcigwer==null?"https://image.freepik.com/free-vector/young-people-smiling-blue-background_18591-52402.jpg":imgcigwer),fit: BoxFit.cover)
               ),
             ),
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height*1/3-60,
               decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(.2),
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50),bottomRight: Radius.circular(50) ),
+                color: Colors.black.withOpacity(.2),
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50),bottomRight: Radius.circular(50) ),
               ),
             ),
             Positioned(
@@ -106,7 +67,7 @@ class CustomSliverAppBar extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     color: Colors.green,
-                    image: DecorationImage(image: AssetImage("Assets/market1.jpg"),fit: BoxFit.cover),
+                    image: DecorationImage(image: NetworkImage(imglogo==null?'https://image.freepik.com/free-vector/young-people-smiling-blue-background_18591-52397.jpg':imglogo),fit: BoxFit.cover),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey,
@@ -132,28 +93,29 @@ class CustomSliverAppBar extends StatelessWidget {
                   child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
 
-                    // SellerHomeDetails_WithIcon(context: context,title: "كنتاكي",icon: Icons.person),
-                    SellerHomeDetails_WithIcon(context: context,title: "0121 003 5476",icon: Icons.phone_android),
-                    SellerHomeDetails_WithIcon(context: context,title: "040 2246464",icon: Icons.phone),
-                    SellerHomeDetails_WithIcon(context: context,title: "12Pm -12Am",icon: Icons.timer),
-                    SellerHomeDetails_WithImage(context: context,title: "لينك الفيس",image: "Assets/icons/faceb.png"),
-                    SellerHomeDetails_WithImage(context: context,title: "0121 003 5476",image: "Assets/icons/whatsb.png"),
-                    SellerHomeDetails_WithIcon(context: context,title: "رقم17 ش شكرى القواتلى، المحلة الكبرى (قسم 2)",icon: Icons.home),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5,bottom: 5,right: 10,left: 10),
-                      child:   Row(mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text("شكري",style: TextStyle(color: Colors.white,fontSize: 17),),
-                          Text("  -  ",style: TextStyle(color: Colors.white,fontSize: 17),),
-                          Text("المحلة الكبري",style: TextStyle(color: Colors.white,fontSize: 17),),
-                          Text("  -  ",style: TextStyle(color: Colors.white,fontSize: 17),),
-                          Text("الغربية",style: TextStyle(color: Colors.white,fontSize: 17),),
-                          SizedBox(width: 5,),
-                          Icon(Icons.location_on,color: Colors.white,size: 30,),
-                        ],),
-                    )
+                      // SellerHomeDetails_WithIcon(context: context,title: "كنتاكي",icon: Icons.person),
 
-                  ],),
+                      SellerHomeDetails_WithIcon(context: context,title: phone1,icon: Icons.phone_android),
+                      SellerHomeDetails_WithIcon(context: context,title: phone2,icon: Icons.phone),
+                      SellerHomeDetails_WithIcon(context: context,title: time,icon: Icons.timer),
+                      SellerHomeDetails_WithImage(context: context,title: face,image: "Assets/icons/faceb.png"),
+                      SellerHomeDetails_WithImage(context: context,title: whats,image: "Assets/icons/whatsb.png"),
+                      SellerHomeDetails_WithIcon(context: context,title: address,icon: Icons.home),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 5,bottom: 5,right: 10,left: 10),
+                        child:   Row(mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(area,style: TextStyle(color: Colors.white,fontSize: 17),),
+                            Text("  -  ",style: TextStyle(color: Colors.white,fontSize: 17),),
+                            Text(city,style: TextStyle(color: Colors.white,fontSize: 17),),
+                            Text("  -  ",style: TextStyle(color: Colors.white,fontSize: 17),),
+                            Text(governorate,style: TextStyle(color: Colors.white,fontSize: 17),),
+                            SizedBox(width: 5,),
+                            Icon(Icons.location_on,color: Colors.white,size: 30,),
+                          ],),
+                      )
+
+                    ],),
                 ),
               ),
             ),
@@ -165,84 +127,5 @@ class CustomSliverAppBar extends StatelessWidget {
     );
   }
 }
-
-
-void showAlertDeleteProduct(BuildContext context) {
-  String _product;
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return StatefulBuilder(
-            builder: (context, setState) {
-              return Dialog(
-                shape: RoundedRectangleBorder(
-                    borderRadius:
-                    BorderRadius.circular(20.0)), //this right here
-                child: Container(
-                  height: 120,
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Form(
-                      key: _formKey,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text("هل تريد مسح هذا المنتج ؟ ",style: TextStyle(color: Colors.black,fontSize: 23),),
-
-                          Row( crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              InkWell(
-                                onTap: (){
-                                  setState(() {
-                                    Navigator.pop(context);
-
-                                  });
-                                },
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width/4,
-                                  height: 35,
-                                  decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Center(child: Text(" لا ",style: TextStyle(color: Colors.white,fontSize: 20),),),
-                                ),
-                              ),
-
-                              SizedBox(width: 30,),
-                              InkWell(
-                                onTap: (){
-                                  setState(() {
-
-                                  });
-                                },
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width/4,
-                                  height: 35,
-                                  decoration: BoxDecoration(
-                                    color: Colors.red,
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Center(child: Text(" نعم ",style: TextStyle(color: Colors.white,fontSize: 20),),),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              );
-            }
-        );
-      });
-}
-
-
-
-
 
 
