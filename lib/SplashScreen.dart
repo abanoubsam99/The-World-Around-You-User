@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:the_world_around_you_user/Catalog/home/screens/CatalogScreen.dart';
+import 'package:the_world_around_you_user/Cities/Screens/CitiesScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -13,14 +13,11 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
  // AnimationController _controller;
   //Animation<double> _animation;
-
-
-
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          context, MaterialPageRoute(builder: (context) => CitiesScreen()));
     });
 
 /*
