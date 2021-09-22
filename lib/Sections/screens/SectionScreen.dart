@@ -5,8 +5,8 @@ import 'package:the_world_around_you_user/Sections/widgets/SectionsItem.dart';
 
 
 class SectionsScreen extends StatefulWidget {
- int governorateID,cityID,areaID;
- SectionsScreen({@required this.governorateID,@required this.cityID,@required this.areaID});
+ int governorateID,cityID;
+ SectionsScreen({@required this.governorateID,@required this.cityID});
 
   @override
   _SectionsScreenState createState() => _SectionsScreenState();
@@ -67,7 +67,6 @@ class _SectionsScreenState extends State<SectionsScreen> {
       hveSubSection: _sectionModel.data[index].haveSubSection,
       governorateID: widget.governorateID,
       cityID: widget.cityID,
-      areaID: widget.areaID,
 
     );
     }),

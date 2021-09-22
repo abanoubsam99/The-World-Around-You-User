@@ -4,9 +4,9 @@ import 'package:the_world_around_you_user/SubSections/screens/SubSectionsScreen.
 
 class SectionsItem extends StatelessWidget {
   String image, title;
-  int sectionID,governorateID,cityID,areaID;
+  int sectionID,governorateID,cityID;
   bool hveSubSection;
-  SectionsItem({@required this.title, @required this.image,@required this.sectionID,@required this.hveSubSection,@required this.governorateID,@required this.areaID,@required this.cityID});
+  SectionsItem({@required this.title, @required this.image,@required this.sectionID,@required this.hveSubSection,@required this.governorateID,@required this.cityID});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,6 @@ class SectionsItem extends StatelessWidget {
                         title: title,
                         governorateID:governorateID ,
                         cityID: cityID,
-                        areaID: areaID,
 
                       )));
         }else{
@@ -34,7 +33,6 @@ class SectionsItem extends StatelessWidget {
                        SectionID: sectionID,SectionName: title,
                        governorateID: governorateID,
                        cityID: cityID,
-                       areaID: areaID,
                      )));
         }
 

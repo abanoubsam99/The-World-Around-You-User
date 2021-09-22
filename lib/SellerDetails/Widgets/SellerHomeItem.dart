@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 SellerHomeDetails_WithIcon({BuildContext context,String title,IconData icon}){
   return Padding(
-    padding: const EdgeInsets.only(top: 5,bottom: 5,right: 10,left: 10),
+    padding: const EdgeInsets.only(top: 3,bottom: 3,right: 10,left: 10),
     child:   Row(mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Text(title,style: TextStyle(color: Colors.white,fontSize: 14),),
         SizedBox(width: 5,),
-        Icon(icon,color: Colors.white,size: 30,),
+        Icon(icon,color: Colors.white,size: 20,),
       ],),
   );
 }
 
 SellerHomeDetails_WithImage({BuildContext context,String title,String image}){
   return Padding(
-    padding: const EdgeInsets.only(top: 5,bottom: 5,right: 10,left: 10),
+    padding: const EdgeInsets.only(top: 3,bottom: 3,right: 10,left: 10),
     child:   Row(mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Text(title,style: TextStyle(color: Colors.white,fontSize: 14),),
         SizedBox(width: 5,),
-        Image.asset(image,color: Colors.white,width: 30,height: 30,),
+        Image.asset(image,color: Colors.white,width: 20,height: 20,),
       ],),
   );
 }

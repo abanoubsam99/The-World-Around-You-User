@@ -6,11 +6,11 @@ import 'package:the_world_around_you_user/SubSubSections/screens/SubSubSectionSc
 
 class SubSectionsItem extends StatelessWidget {
   String image, title;
-  int subsectionID,governorateID,cityID,areaID;
+  int subsectionID,governorateID,cityID;
   bool hveSubSubSection;
 
 
-  SubSectionsItem({@required this.title, @required this.image,@required this.subsectionID,@required this.hveSubSubSection,@required this.governorateID,@required this.areaID,@required this.cityID});
+  SubSectionsItem({@required this.title, @required this.image,@required this.subsectionID,@required this.hveSubSubSection,@required this.governorateID,@required this.cityID});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,6 @@ class SubSectionsItem extends StatelessWidget {
                         title: title,
                         governorateID: governorateID,
                         cityID: cityID,
-                        areaID:areaID,
 
                       )));
         }else{
@@ -39,7 +38,6 @@ class SubSectionsItem extends StatelessWidget {
                         SectionID: subsectionID,
                         governorateID: governorateID,
                         cityID: cityID,
-                        areaID:areaID,
                       )));
         }
 

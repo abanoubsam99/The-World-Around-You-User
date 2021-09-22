@@ -17,7 +17,7 @@ class MyMarketsItem extends StatelessWidget {
             whats: model.whatsappNum,
             time: model.appoiment,
             phone2:model.mobile2 ,
-            phone1:model.mobile1 ,
+            phone1:model.mobile1==null?"":model.mobile1 ,
             imglogo: model.logo,
             imgcigwer:model.coverPhoto ,
             face: model.faceBookLink,
@@ -83,7 +83,7 @@ class MyMarketsItem extends StatelessWidget {
                         color: Theme.of(context).primaryColor,
                       ),
                       Text(
-                        model.mobile1,
+                        model.mobile1==null?"":model.mobile1,
                         style: TextStyle(color: Colors.black, fontSize: 15),
                       )
                     ],

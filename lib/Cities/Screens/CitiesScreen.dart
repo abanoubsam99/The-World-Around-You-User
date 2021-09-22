@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_world_around_you_user/Cities/Controller/CitiesController.dart';
 import 'package:the_world_around_you_user/Cities/Model/CitiesMolel.dart';
+import 'package:the_world_around_you_user/Sections/screens/SectionScreen.dart';
 import 'package:the_world_around_you_user/Streets/Screens/StreetsScreen.dart';
 
 class CitiesScreen extends StatefulWidget {
@@ -48,10 +49,15 @@ class _CitiesScreenState extends State<CitiesScreen> {
           itemBuilder: (context, index) {
             return  InkWell(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => StreetsScreen(
-                  CityID: snapshot.data.data[index].iD,
-                  CitName: snapshot.data.data[index].name,
-                  governorateID: 2,
+                // Navigator.push(context, MaterialPageRoute(builder: (context) => StreetsScreen(
+                //   CityID: snapshot.data.data[index].iD,
+                //   CitName: snapshot.data.data[index].name,
+                //   governorateID: 2,
+                //
+                // )));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SectionsScreen(
+                  governorateID:2 ,
+                  cityID: snapshot.data.data[index].iD,
 
                 )));
               },

@@ -6,8 +6,8 @@ import 'package:the_world_around_you_user/SubSubSections/widgets/SubSubSectionsI
 class SubSubSectionScreen extends StatefulWidget {
   int subsectionID;
   String title;
-  int governorateID,cityID,areaID;
-  SubSubSectionScreen({@required this.governorateID,@required this.areaID,@required this.cityID,@required this.subsectionID,@required this.title});
+  int governorateID,cityID;
+  SubSubSectionScreen({@required this.governorateID,@required this.cityID,@required this.subsectionID,@required this.title});
   @override
   _SubSubSectionScreenState createState() => _SubSubSectionScreenState();
 }
@@ -67,7 +67,6 @@ class _SubSubSectionScreenState extends State<SubSubSectionScreen> {
       subsectionID: _subSubSectionModel.data[index].iD,
       governorateID:widget.governorateID ,
       cityID: widget.cityID,
-      areaID: widget.areaID,
     );
     }),
 

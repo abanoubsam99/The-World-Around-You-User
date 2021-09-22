@@ -10,7 +10,7 @@ import 'package:the_world_around_you_user/const.dart';
 class MarketController {
   AllMarketModel _allMarketModel=AllMarketModel();
 
-  Future<AllMarketModel> GetMarket({int sectionID,int governorateID,int cityID,int areaID}) async {
+  Future<AllMarketModel> GetMarket({int sectionID,int governorateID,int cityID}) async {
     var dio = Dio();
 
     final response = await dio.get(MyConstants().urlBasic+'GetSectionSubscribes',
@@ -19,7 +19,6 @@ class MarketController {
             'SectionID':sectionID,
             'GovernorateID':governorateID,
             'CityID':cityID,
-            'AreaID':areaID
           },
           followRedirects: false,
           validateStatus: (status) {

@@ -7,8 +7,8 @@ import 'package:the_world_around_you_user/SellerDetails/Screens/SellerHomeScreen
 
 class MarketsScreen extends StatefulWidget {
   String SectionName;
-  int SectionID,governorateID,cityID,areaID;
-  MarketsScreen({@required this.SectionID,@required this.SectionName,@required this.governorateID,@required this.areaID,@required this.cityID});
+  int SectionID,governorateID,cityID;
+  MarketsScreen({@required this.SectionID,@required this.SectionName,@required this.governorateID,@required this.cityID});
 
   @override
   _MarketsScreenState createState() => _MarketsScreenState();
@@ -23,9 +23,7 @@ class _MarketsScreenState extends State<MarketsScreen> {
     _allMarketModel=await _marketController.GetMarket(
       governorateID: widget.governorateID,
       cityID: widget.cityID,
-      areaID: widget.areaID,
       sectionID: widget.SectionID,
-
     );
     setState(() {
       _loading=false;

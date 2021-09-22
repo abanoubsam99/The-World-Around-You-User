@@ -56,8 +56,7 @@ class _StreetsScreenState extends State<StreetsScreen> {
             return InkWell(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => SectionsScreen(
-                  areaID: snapshot.data.data[index].iD,
-                  governorateID:widget.governorateID ,
+                  governorateID:2 ,
                   cityID: widget.CityID,
 
                 )));

@@ -5,10 +5,10 @@ import 'package:the_world_around_you_user/Markets/AllMarket/Screens/MarketsScree
 
 class SubSubSectionItem extends StatelessWidget {
   String image, title;
-  int subsectionID,governorateID,cityID,areaID;
+  int subsectionID,governorateID,cityID;
 
 
-  SubSubSectionItem({@required this.title, @required this.image,@required this.subsectionID,@required this.governorateID,@required this.areaID,@required this.cityID});
+  SubSubSectionItem({@required this.title, @required this.image,@required this.subsectionID,@required this.governorateID,@required this.cityID});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,6 @@ class SubSubSectionItem extends StatelessWidget {
                       SectionName: title,
                       governorateID: governorateID,
                       cityID: cityID,
-                      areaID: areaID,
                     )));
       },
       child: Container(
